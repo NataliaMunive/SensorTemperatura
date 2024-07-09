@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">    
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+  <title>Sensor de Temperatura</title>
+</head>
+<body>
+  <!-- Header con navegación -->
+  <header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.ico" alt="Logo" id="loguis"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="convertidor.html">Mediciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="reporte.html">Reporte</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Inicio de todas las páginas -->
+  <div class="all-page-title page-breadcrumb">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Sensor de Temperatura</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contenido principal -->
+  <div id="pag">
+    <div class="section">
+      <h2 class="titulo">Descripción del Proyecto</h2>
+      <p>Este proyecto tiene como objetivo diseñar un sensor de temperatura utilizando el sensor LM335 y amplificadores operacionales. <br> La señal del LM335 se escala y se convierte a un formato digital utilizando un ADC0804. <br> La información se muestra en una interfaz web que se actualiza en tiempo real.</p>
+    </div>
+
+    <div class="section">
+      <h2 class="titulo">Objetivo</h2>
+      <p> Diseñar un termómetro utilizando el sensor LM335 y amplificadores operacionales, aplicando los conocimientos adquiridos en clase, el diseño debe incluir:
+        <br>•	Un convertidor Analógico-Digital para permitir una medición precisa de la temperatura.
+        <br>•	Representación mediante diagramas a bloques que detallen la interconexión de los componentes, reflejando la comprensión de los principios fundamentales de los amplificadores operacionales y convertidores Analógico-Digitales.
+        <br>El sensor LM335 mide temperaturas de 0 a 50°C, con una salida que varía de 2.73V a 3.23V respectivamente, esta señal se pasará a través de un bloque de amplificadores operacionales para escalarla de 0 a 5V. Posteriormente, la señal escalada se enviará al convertidor ADC0804, que proporcionará una salida binaria de 8 bits.
+        </p>
+    </div>
+
+    <div class="section">
+      <h2 class="titulo">Componentes</h2>
+      <ul>
+        <li>Sensor LM335</li>
+        <li>Amplificadores operacionales</li>
+        <li>Convertidor ADC0804 / Arduino</li>
+        <li>Interfaz web</li>
+        <li>Diversos valores de resistencias</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="titulo">Diagrama a Bloques con el ADC0804</h2>
+      <img src="img/diagrama_bloques.png" alt="Diagrama a Bloques" class="img-fluid">
+    </div>
+
+    <div class="section">
+      <h2 class="titulo">Diagrama a Bloques con el Arduino</h2>
+      <img src="img/PNG.png" alt="Diagrama a Bloques" class="img-fluid">
+    </div>
+
+    <div class="section">
+      <h2 class="titulo" >Fórmulas para los Voltajes</h2>
+ 
+        <img src="img/formulas.png" alt="Diagrama a Bloques" class="img-fluid">
+      
+  </div>
+
+  <!-- Footer -->
+<div class="footer-container">
+  <footer class="footer-area bg-f">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <h3>Objetivo</h3>
+          <p>
+            Diseñar un sensor de temperatura utilizando el sensor LM335 y amplificadores operacionales.
+          </p>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <h3>EXPO ESCOM</h3>
+          <p> ESCOM IPN</p>
+          <p> ELECTRONICA ANALOGICA</p>
+          <p> PROFESOR: MARTÍNEZ DIAZ JUAN CARLOS </p>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <h3>Miembros</h3>
+          <p><span class="text-color">AGUILAR CABADAS BRANDON DAVID</span></p>
+          <p><span class="text-color">MUNIVE HERNÁNDEZ ERIKA NATALIA</span></p>
+          <p><span class="text-color">TORRES HERRERA OSCAR ANTONIO</span></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="company-name">EXPO ESCOM - 2024 | SENSOR DE TEMPERATURA </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+  
+  <!-- Botón para volver al inicio -->
+  <a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+
+  <!-- Archivos JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

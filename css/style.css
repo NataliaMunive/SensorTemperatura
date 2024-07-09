@@ -1,0 +1,452 @@
+/*------------------------------------------------------------------
+    IMPORT FONTS
+-------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+
+/*------------------------------------------------------------------
+    BODY
+-------------------------------------------------------------------*/
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #87CEEB; /* Azul cielo */
+    transition: background-color 0.5s ease; /* Transición suave del color de fondo */
+}
+
+.borde {
+    background-color: #87CEEB;
+    padding: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#loguis {
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+#pag {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    background-color: #87CEEB; /* Fondo del contenido */
+    text-align: center; /* Centrar el contenido */
+    transition: background-color 0.5s ease; /* Transición suave del color de fondo */
+    margin-bottom: 20px; /* Reducir espacio al final del contenido */
+}
+
+/* Cambio de color de fondo conforme la temperatura disminuye */
+body.cold-temperature {
+    background-color: #b6b6b6; /* Gris claro */
+}
+
+#pag.cold-temperature {
+    background-color: #ccc; /* Fondo más claro cuando la temperatura es baja */
+}
+
+/*------------------------------------------------------------------
+    GRID CONTAINER
+-------------------------------------------------------------------*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.controls {
+    grid-column: 1 / span 1;
+    text-align: center; /* Centrar los botones */
+}
+
+.data {
+    grid-column: 2 / span 1;
+}
+
+/*------------------------------------------------------------------
+    BUTTONS
+-------------------------------------------------------------------*/
+button {
+    background-color: rgb(20, 34, 40); /* Fondo del botón */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+button:hover {
+    background-color: rgb(49, 84, 99); /* Fondo del botón al pasar el mouse */
+}
+
+/*------------------------------------------------------------------
+    LEDS
+-------------------------------------------------------------------*/
+#leds {
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.led {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-block;
+}
+
+.led-on {
+    background-color: red;
+}
+
+.led-off {
+    background-color: grey;
+}
+
+/*------------------------------------------------------------------
+    HEADER
+-------------------------------------------------------------------*/
+.top-navbar {
+    position: relative;
+    z-index: 10;
+}
+
+.top-navbar .navbar {
+    padding: 15px 0px;
+    position: fixed;
+    width: 100%;
+    border-radius: 0px 0px 100px 100px;
+    transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-link {
+    color: #010101;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover {
+    background: rgb(20, 34, 40);
+    color: #ffffff;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
+    background: rgb(20, 34, 40);
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    border: none;
+    border-radius: 0px;
+    padding: 10px;
+    box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu a {
+    padding: 10px 10px;
+    text-transform: uppercase;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover {
+    background: #c5c5c5;
+    color: #ffffff;
+}
+
+.navbar-light .navbar-toggler:hover {
+    background: rgb(20, 34, 40);
+}
+
+/*------------------------------------------------------------------
+    FOOTER
+-------------------------------------------------------------------*/
+.footer-container {
+    background-color: #142228; /* Fondo negro */
+    color: #fff; /* Letras blancas */
+    padding-top: 50px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+
+.bg-f {
+    background-color: #142228;
+}
+
+.footer-area .container {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-area h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.726);
+    margin-bottom: 10px;
+}
+
+.footer-area p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.footer-area p.lead {
+    font-size: 19px;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+
+.footer-area p.lead a {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-area p.lead a:hover {
+    color: #c5b2a4;
+}
+
+.footer-area p a {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footer-area p a:hover {
+    color: #c5b2a4;
+}
+
+.f-social {
+    padding-bottom: 10px;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.f-social li a {
+    font-size: 18px;
+    color: #c5b2a4;
+    width: 38px;
+    height: 38px;
+    display: block;
+    text-align: center;
+    line-height: 38px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+.copyright {
+    margin-top: 20px;
+    position: relative;
+    display: block;
+    background-color: #142228;
+    border-top: 1px solid rgb(255, 255, 255);
+    padding: 30px 0;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.copyright .company-name {
+    font-size: 16px;
+    text-align: center;
+}
+
+.copyright .company-name a {
+    font-size: 16px;
+}
+
+/*------------------------------------------------------------------
+    ALL PAGES
+-------------------------------------------------------------------*/
+.page-breadcrumb {
+    padding: 100px 0 15px;
+    background: url(../images/all-bg.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+}
+
+.all-page-title .container {
+    position: relative;
+    z-index: 2;
+}
+
+.all-page-title::before {
+    background: #010101;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.all-page-title h1 {
+    font-size: 38px;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    padding: 0px;
+    font-weight: 500;
+}
+
+.all-page-tit h1 {
+    padding: 0px;
+}
+
+.page-breadcrum {
+    padding: 50px 15px;
+    background: #87CEEB;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+}
+
+.section {
+    background-color: #142228;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.section h2.titulo {
+    color: #ffffff;
+}
+
+.section p, .section ul {
+    color: #ffffff;
+}
+
+/*------------------------------------------------------------------
+    IMAGENES
+-------------------------------------------------------------------*/
+@keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.gif-container {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    text-align: center;
+}
+
+.gif-container img {
+    position: absolute;
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+#sol {
+    width: 280px;
+    opacity: 1;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nube1 {
+    width: 250px;
+    opacity: 1;
+    filter: grayscale(0%);
+    left: 5%;
+    animation: move 5s infinite;
+    animation-delay: 1s; /* 1 segundo de retraso */
+}
+
+#nube2 {
+    width: 220px;
+    opacity: 1;
+    filter: grayscale(0%);
+    right: 5%;
+    bottom: 30%;
+    animation: move 5s infinite;
+    animation-delay: 2s; /* 2 segundos de retraso */
+}
+
+#nube3 {
+    width: 280px;
+    opacity: 1;
+    filter: grayscale(0%);
+    bottom: 30%;
+    left: 15%;
+    animation: move 5s infinite;
+    animation-delay: 3s; /* 3 segundos de retraso */
+}
+
+#nube4 {
+    width: 280px; /*esa*/
+    opacity: 1;
+    filter: grayscale(0%);
+    bottom: 30%;
+    right: 20%;
+    animation: move 5s infinite;
+    animation-delay: 4s; /* 4 segundos de retraso */
+}
+
+#nube5 {
+    width: 200px;
+    opacity: 1;
+    filter: grayscale(0%);
+    left: 28%;
+    animation: move 5s infinite;
+    animation-delay: 5s; /* 5 segundos de retraso */
+}
+
+#nube6 {
+    width: 250px;
+    opacity: 1;
+    filter: grayscale(0%);
+    right: 15%;
+    animation: move 5s infinite;
+    animation-delay: 6s; /* 6 segundos de retraso */
+}
+
+/* Ajustar opacidad y filtro para diferentes condiciones */
+body.cold-temperature #sol {
+    opacity: 0;
+}
+
+body.cold-temperature #nube1,
+body.cold-temperature #nube2,
+body.cold-temperature #nube3,
+body.cold-temperature #nube4,
+body.cold-temperature #nube5,
+body.cold-temperature #nube6 {
+    filter: grayscale(100%);
+}
+
+.data-container {
+    text-align: center;
+    margin: 20px 20px 20px 20px; /* Ajustar el margen superior para mayor separación */
+}
+
+.data-container p {
+    font-size: 20px; /* Aumentar el tamaño de las letras */
+    margin: 5px 0; /* Reducir espacio entre las líneas de texto */
+}
+
+.data-container span {
+    font-weight: bold; /* Hacer el texto del span más destacado */
+}
+
+.large-text {
+    font-size: 2em; /* Ajusta este valor según el tamaño que desees */
+    font-weight: bold; /* Opcional: hace que el texto sea negrita */
+  }
+  
+  
